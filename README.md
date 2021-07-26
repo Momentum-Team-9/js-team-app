@@ -70,104 +70,53 @@ At the beginning of each shift, pull down all the code from the repo. The driver
 
 At the end of each shift, add, commit, and push all the code that has been written.
 
-## Team 1
-
-### Arthur, Ben, Laura, Mike, Tatiana, Tip
-
 #### shift 1
 
-- driver: Tatiana
-- navigator: Mike
-- moderator: Ben
-- scout: Laura
-- contributors: Arthur, Tip
+- driver: Em
+- navigator: Joe
+- moderator: Sarah
+- scout: Connor
+- contributors: Brian, Andrea
 
 #### shift 2
 
-- driver: Laura
-- navigator: Tatiana
-- moderator: Mike
-- scout: Tip
-- contributors: Ben, Arthur
+- driver: Brian
+- navigator: Andrea
+- moderator: Em
+- scout: Joe
+- contributors: Connor, Sarah
 
 #### shift 3
 
-- driver: Tip
-- navigator: Laura
-- moderator: Tatiana
-- scout: Arthur
-- contributors: Mike, Ben
+- driver: Connnor
+- navigator: Sarah
+- moderator: Andrea
+- scout: Em
+- contributors: Brian, Joe
 
 #### shift 4
 
-- driver: Arthur
-- navigator: Tip
-- moderator: Laura
-- scout: Ben
-- contributors: Tatiana, Mike
-
+- driver: Joe
+- navigator: Brian
+- moderator: Connor
+- scout: Andrea
+- contributors: Sarah, Em
 #### shift 5
 
-- driver: Ben
-- navigator: Arthur
-- moderator: Tip
-- scout: Mike
-- contributors: Tatiana, Laura
+- driver: Sarah
+- navigator: Em
+- moderator: Joe
+- scout: Connor
+- contributors: Andrea,Brian
 
 #### shift 6
 
-- driver: Mike
-- navigator: Ben
-- moderator: Arthur
-- scout: Tatiana
-- contributors: Laura, Tip
+- driver: Andrea
+- navigator: Joe
+- moderator: Brian
+- scout: Sarah
+- contributors: Connor, Em
 
 #### shift 7 -> start over at shift 1
 
 
-## Team 2
-
-### Albany, Cam, Dawud, Grant, Tristan
-
-
-#### shift 1
-
-- driver: Cam
-- navigator: Tristan
-- moderator: Albany
-- scout: Dawud
-- contributor: Grant
-
-#### shift 2
-
-- driver: Tristan
-- navigator: Albany
-- moderator: Dawud
-- scout: Grant
-- contributor: Cam
-
-#### shift 3
-
-- driver: Albany
-- navigator: Dawud
-- moderator: Grant
-- scout: Cam
-- contributor: Tristan
-
-#### shift 4
-
-- driver: Dawud
-- navigator: Grant
-- moderator: Cam
-- scout: Tristan
-- contributor: Albany
-
-#### shift 5
-
-- driver: Grant
-- navigator: Cam
-- moderator: Tristan
-- scout: Albany
-- contributor: Dawud
-
-#### shift 6 -> start over at shift 1
