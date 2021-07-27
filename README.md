@@ -101,6 +101,7 @@ At the end of each shift, add, commit, and push all the code that has been writt
 - moderator: Connor
 - scout: Andrea
 - contributors: Sarah, Em
+
 #### shift 5
 
 - driver: Sarah
@@ -112,11 +113,9 @@ At the end of each shift, add, commit, and push all the code that has been writt
 #### shift 6
 
 - driver: Andrea
-- navigator: Joe
+- navigator: Connor
 - moderator: Brian
 - scout: Sarah
-- contributors: Connor, Em
+- contributors: Joe, Em
 
 #### shift 7 -> start over at shift 1
-
-
