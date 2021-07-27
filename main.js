@@ -4,6 +4,7 @@ const url = 'http://localhost:3000/movies';
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
+  listMovies();
   //add CRUD function
   form.reset();
 });
@@ -17,5 +18,12 @@ form.addEventListener('submit', function (event) {
 //CRUD function to pull movies
 
 function listMovies() {
-  fetch(url);
+  fetch(url)
+  
+  .then ((response) => response.json())
+  .then ((data) => {
+for (let movie of data){
+  console.log(movie, "movie")
+}
+  })
 }
