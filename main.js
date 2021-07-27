@@ -11,6 +11,10 @@ form.addEventListener("submit", function (event) {
   form.reset();
 });
 
+function renderMovieText (movieItem, movieObj) {
+    movieItem.innerHTML = `<span class="movie-title">${movieObj.title}</span>`
+}
+
 //function for creating movie boxes
 function createMovieBox() {
   const movieItem = document.createElement("div");
