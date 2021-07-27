@@ -3,11 +3,15 @@ const url = "http://localhost:3000/movies";
 const movieBox = document.querySelector("#movie-list");
 const movieInput = document.querySelector("#movie-input");
 
+listMovies();
+
 //Activates search bar
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  listMovies();
+  //NEED TO FINISH THIS 
+  const movieText 
+  addMovie();
   form.reset();
 });
 
@@ -16,10 +20,13 @@ function renderMovieText (movieItem, movieObj) {
 }
 
 //function for creating movie boxes
-function createMovieBox() {
+function createMovieBox(movieObj) {
   const movieItem = document.createElement("div");
+  movieItem.id = movieObj.id
   movieItem.classList.add("movie-card");
+  renderMovieText(movieItem, movieObj)
   movieBox.appendChild(movieItem);
+  console.log(movieItem)
   //call
 }
 
@@ -46,13 +53,17 @@ function addMovie(movieText) {
   console.log(movieText);
   fetch(url, {
     method: "POST",
-    header: { "Content-type": "application/json" },
+    headers: { "Content-type": "application/json" },
     body: JSON.stringify({
       title: movieText,
       watched: false,
       created_at: moment().format(),
     }),
-  });
-}
+  })
+    .then((response) => response.json())
+    .then((movie) => createMovieBox(movie))
+} 
+
+
 
 // DELETE function
