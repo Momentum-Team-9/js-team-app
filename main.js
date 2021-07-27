@@ -1,5 +1,7 @@
 const form = document.querySelector('.movie-form');
 const url = 'http://localhost:3000/movies';
+const movieBox = document.querySelector('#movie-list');
+
 //Activates search bar
 
 form.addEventListener('submit', function (event) {
@@ -10,6 +12,12 @@ form.addEventListener('submit', function (event) {
 });
 
 //function for creating movie boxes
+function createMovieBox (){
+  const movieItem = document.createElement('div');
+  movieItem.classList.add('movie-card')
+  movieBox.appendChild(movieItem);
+  //call 
+}
 
 //eventlistener function to mark movies as watched
 
@@ -22,8 +30,11 @@ function listMovies() {
   
   .then ((response) => response.json())
   .then ((data) => {
-for (let movie of data){
-  console.log(movie, "movie")
+    for (let movie of data){
+      console.log(movie, "movie")
+      createMovieBox(movie)
 }
   })
 }
+
+// Add POST function to render movies on page
