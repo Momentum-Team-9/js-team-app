@@ -1,33 +1,33 @@
-const form = document.querySelector(".movie-form");
-const url = "http://localhost:3000/movies";
-const movieBox = document.querySelector("#movie-list");
-const movieInput = document.querySelector("#movie-input");
+const form = document.querySelector('.movie-form');
+const url = 'http://localhost:3000/movies';
+const movieBox = document.querySelector('#movie-list');
+const movieInput = document.querySelector('#movie-input');
 
 listMovies();
 
 //Activates search bar
 
-form.addEventListener("submit", function (event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
-  //NEED TO FINISH THIS 
-  const movieText = movieInput.value
-  console.log(movieText, "movieText");
+  //NEED TO FINISH THIS
+  const movieText = movieInput.value;
+  console.log(movieText, 'movieText');
   addMovie(movieText);
   form.reset();
 });
 
-function renderMovieText (movieItem, movieObj) {
-    movieItem.innerHTML = `<span class="movie-title card">${movieObj.title}</span>`
+function renderMovieText(movieItem, movieObj) {
+  movieItem.innerHTML = `<span class="movie-title card">${movieObj.title}</span>`;
 }
 
 //function for creating movie boxes
 function createMovieBox(movieObj) {
-  const movieItem = document.createElement("div");
-  movieItem.id = movieObj.id
-  movieItem.classList.add("movie-card");
-  renderMovieText(movieItem, movieObj)
+  const movieItem = document.createElement('div');
+  movieItem.id = movieObj.id;
+  movieItem.classList.add('movie-card');
+  renderMovieText(movieItem, movieObj);
   movieBox.appendChild(movieItem);
-  console.log(movieItem)
+  console.log(movieItem);
   //call
 }
 
@@ -43,7 +43,7 @@ function listMovies() {
     .then((response) => response.json())
     .then((data) => {
       for (let movie of data) {
-        console.log(movie, "movie");
+        console.log(movie, 'movie');
         createMovieBox(movie);
       }
     });
@@ -53,8 +53,8 @@ function listMovies() {
 function addMovie(movieText) {
   console.log(movieText);
   fetch(url, {
-    method: "POST",
-    headers: { "Content-type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-type': 'application/json' },
     body: JSON.stringify({
       title: movieText,
       watched: false,
@@ -62,9 +62,14 @@ function addMovie(movieText) {
     }),
   })
     .then((response) => response.json())
-    .then((movie) => createMovieBox(movie))
-} 
-
-
+    .then((movie) => createMovieBox(movie));
+}
 
 // DELETE function
+
+function deleteMovie(element) {
+  const movieId = element.parentElement.id;
+  fetch(url + '/' + `${movieId}`, {
+    method: 'DELETE',
+  }).then(() => element.parentElement.remove());
+}
