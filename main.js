@@ -10,13 +10,14 @@ listMovies();
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   //NEED TO FINISH THIS 
-  const movieText 
-  addMovie();
+  const movieText = movieInput.value
+  console.log(movieText, "movieText");
+  addMovie(movieText);
   form.reset();
 });
 
 function renderMovieText (movieItem, movieObj) {
-    movieItem.innerHTML = `<span class="movie-title">${movieObj.title}</span>`
+    movieItem.innerHTML = `<span class="movie-title card">${movieObj.title}</span>`
 }
 
 //function for creating movie boxes
