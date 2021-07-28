@@ -16,8 +16,15 @@ form.addEventListener('submit', function (event) {
   form.reset();
 });
 
+//event listener to trigger delete and put functions
+movieBox.addEventListener('click', function (event) {
+  if (event.target.classList.contains('remove')) {
+    deleteMovie(event.target)
+  }
+})
+
 function renderMovieText(movieItem, movieObj) {
-  movieItem.innerHTML = `<span class="movie-title card">${movieObj.title}</span>`;
+  movieItem.innerHTML = `<div class="card"><span class="movie-title">${movieObj.title}</span><button class="watched">Mark as watched</button><button class="remove dangerous">Remove from list</button></div>`;
 }
 
 //function for creating movie boxes
@@ -68,8 +75,9 @@ function addMovie(movieText) {
 // DELETE function
 
 function deleteMovie(element) {
-  const movieId = element.parentElement.id;
+  const movieId = element.parentElement.parentElement.id;
+  console.log(movieId)
   fetch(url + '/' + `${movieId}`, {
     method: 'DELETE',
-  }).then(() => element.parentElement.remove());
+  }).then(() => element.parentElement.parentElement.remove());
 }
